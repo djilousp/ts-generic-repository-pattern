@@ -1,0 +1,1 @@
+# ts-generic-repository-pattern
