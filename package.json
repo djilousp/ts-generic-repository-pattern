@@ -4,7 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile-test": "tsc --noEmit -p .",
+    "start": "ts-node .",
+    "dev": "ts-node-dev .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint 'src/**/*.ts'",
+    "prettier": "prettier --write 'src/**/*.ts'"
+  },
+  "dependencies": {
+    "knex": "^1.0.3",
+    "md5": "^2.2.1",
+    "nanoid": "^3.1.16",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.11",
+    "prettier": "^2.3.2",
+    "ts-node-dev": "^1.1.8",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
+    "typescript": "^4.6.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "avoid"
   },
   "author": "",
   "license": "ISC"
