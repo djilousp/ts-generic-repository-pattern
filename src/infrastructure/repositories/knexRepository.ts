@@ -18,6 +18,6 @@ export class KnexRepository<T> implements BaseRepository<T> {
     throw new Error('Method not implemented.')
   }
   delete(id: string | number): Promise<boolean> {
-    throw new Error('Method not implemented.')
+    return this.qb.where(id).del()
   }
 }
